@@ -7,7 +7,11 @@
 .pnp.js
 .env
 node_modules/
+<<<<<<< HEAD
 build
+=======
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 # testing
 /coverage
 

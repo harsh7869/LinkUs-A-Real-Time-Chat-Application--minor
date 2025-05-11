@@ -13,7 +13,11 @@ const GroupChatModel = ({ children }) => {
   const [search, setSearch] = useState("");
   const [searchResult, setSearchResult] = useState([]);
   const [loading, setLoading] = useState(false);
+<<<<<<< HEAD
   const endpoint = process.env.REACT_APP_BASE_URL;
+=======
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
   const toast = useToast()
   const { user, chats, setChats } = ChatState();
 
@@ -28,10 +32,17 @@ const GroupChatModel = ({ children }) => {
       setLoading(true);
       const config = {
         headers: {
+<<<<<<< HEAD
           Authorization: `Bearer ${user}`,
         },
       };
       const { data } = await axios.get(`${endpoint}/api/user?search=${search}`, config);
+=======
+          Authorization: `Bearer ${user.token}`,
+        },
+      };
+      const { data } = await axios.get(`/api/user?search=${search}`, config);
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
       setLoading(false);
       setSearchResult(data);
@@ -62,11 +73,19 @@ const GroupChatModel = ({ children }) => {
     try {
       const config = {
         headers: {
+<<<<<<< HEAD
           Authorization: `Bearer ${user}`,
         },
       };
       const { data } = await axios.post(
         `${endpoint}/api/chat/group`,
+=======
+          Authorization: `Bearer ${user.token}`,
+        },
+      };
+      const { data } = await axios.post(
+        `/api/chat/group`,
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
         {
           name: groupChatName,
           users: JSON.stringify(selectedUsers.map((u) => u._id)),

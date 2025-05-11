@@ -1,5 +1,8 @@
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 const express = require("express");
 const dotenv = require("dotenv");
 const { chats } = require("./data/data");
@@ -8,7 +11,11 @@ const colors = require("colors");
 const chatRoutes = require("./Routes/chatRoutes");
 const userRoutes = require('./Routes/userRoutes');
 const messageRoutes = require('./Routes/messageRoutes')
+<<<<<<< HEAD
 const cors = require("cors");
+=======
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 const { notFound, errorHandler } = require("./middlewares/errrorMIddleware");
 const { Socket } = require("socket.io");
 
@@ -20,6 +27,7 @@ const app = express();
 
 
 app.use(express.json())
+<<<<<<< HEAD
 app.use(
     cors({
   origin: JSON.parse(process.env.CORS_ORIGIN),
@@ -32,6 +40,11 @@ app.get('/', (req, res) => {
     res.json({
         "NAME":"BACKEND OF LinkUs",
     });
+=======
+
+app.get('/', (req, res) => {
+    res.send("api is setteled");
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 })
 
 app.use('/api/user', (userRoutes))
@@ -50,8 +63,13 @@ const server = app.listen(5000, console.log(`server started on port ${PORT}`.blu
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
     cors: {
+<<<<<<< HEAD
         origin: JSON.parse(process.env.CORS_ORIGIN),
         
+=======
+        origin: "http://localhost:3000",
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     },
 });
 
@@ -87,3 +105,10 @@ io.on("connection", (socket) => {
         socket.leave(userData._id);
     });
 });
+<<<<<<< HEAD
+=======
+
+
+
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947

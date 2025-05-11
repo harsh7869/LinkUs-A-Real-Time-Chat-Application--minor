@@ -2,7 +2,11 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   
+=======
+  "proxy": "http://127.0.0.1:5000",
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
@@ -23,7 +27,10 @@
     "socket.io-client": "^4.7.2",
     "web-vitals": "^2.1.4"
   },
+<<<<<<< HEAD
   "homepage": "https://devgupta0513.github.io/LinkUs-minor-1",
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

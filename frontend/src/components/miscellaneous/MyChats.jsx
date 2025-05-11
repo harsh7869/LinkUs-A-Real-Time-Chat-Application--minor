@@ -7,33 +7,50 @@ import { AddIcon } from '@chakra-ui/icons';
 import ChatLoading from '../ChatLoading';
 import { getSender } from '../../config/ChatLogics';
 import GroupChatModel from './GroupChatModel';
+<<<<<<< HEAD
 import Cookies from "js-cookie";
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
 
 const MyChats = ({ fetchAgain }) => {
   const [loggedUser, setLoggedUser] = useState();
+<<<<<<< HEAD
   const endpoint = process.env.REACT_APP_BASE_URL;
+=======
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
   const { selectedChat, setSelectedChat, user, chats, setChats } = ChatState();
   const toast = useToast()
 
   const fetchChats = async () => {
     // console.log(user._id);
     try {
+<<<<<<< HEAD
       
       
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
       const config = {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
       };
 
+<<<<<<< HEAD
       const { data } = await axios.get(`${endpoint}/api/chat`, config);
+=======
+      const { data } = await axios.get("/api/chat", config);
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
       setChats(data);
 
 
     } catch (error) {
+<<<<<<< HEAD
       // console.log(user)
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
       toast({
         title: "Error Occured!",
         description: "Failed to Load the chats",
@@ -55,8 +72,12 @@ const MyChats = ({ fetchAgain }) => {
 
 
   useEffect(() => {
+<<<<<<< HEAD
     // setLoggedUser(JSON.parse(sessionStorage.getItem("User")));
         setLoggedUser(JSON.parse(Cookies.get("token")));
+=======
+    setLoggedUser(JSON.parse(localStorage.getItem("userInfo")));
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     fetchChats();
     // eslint-disable-next-line
  }, [fetchAgain]);

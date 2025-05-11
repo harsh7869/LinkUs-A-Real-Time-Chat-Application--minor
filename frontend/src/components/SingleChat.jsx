@@ -15,7 +15,11 @@ import animationData from "../Animations/typing.json";
 
 
 
+<<<<<<< HEAD
 
+=======
+const endPoint = "http://localhost:5000"
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 var socket, selectedChatCompare;
 
 
@@ -27,7 +31,11 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
   const [typing, setTyping] = useState(false);
   const [istyping, setIsTyping] = useState(false);
   const toast = useToast()
+<<<<<<< HEAD
   const { selectedChat, setSelectedChat, user, notification, setNotification ,endPoint} =
+=======
+  const { selectedChat, setSelectedChat, user, notification, setNotification } =
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     ChatState();
   const defaultOptions = {
     loop: true,
@@ -37,9 +45,13 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       preserveAspectRatio: "xMidYMid slice",
     },
   };
+<<<<<<< HEAD
   // const endPoint = process.env.REACT_APP_BASE_URL;
 
   
+=======
+
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
   useEffect(() => {
     socket = io(endPoint);
     socket.emit("setup", user);
@@ -52,7 +64,10 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
     if (event.key === "Enter" && newMessage) {
       socket.emit("stop typing", selectedChat._id);
       try {
+<<<<<<< HEAD
         
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
         const config = {
           headers: {
             "Content-type": "application/json",
@@ -61,7 +76,11 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
         };
         setNewMessage("");
         const { data } = await axios.post(
+<<<<<<< HEAD
           `${endPoint}/api/message`,
+=======
+          "/api/message",
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
           {
             content: newMessage,
             chatId: selectedChat._id,
@@ -121,12 +140,20 @@ const SingleChat = ({ fetchAgain, setFetchAgain }) => {
       setLoading(true);
 
       const { data } = await axios.get(
+<<<<<<< HEAD
         `${endPoint}/api/message/${selectedChat._id}`,
+=======
+        `/api/message/${selectedChat._id}`,
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
         config
       );
       setMessages(data);
       setLoading(false);
+<<<<<<< HEAD
 
+=======
+     
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
       socket.emit("join chat", selectedChat._id);
     } catch (error) {

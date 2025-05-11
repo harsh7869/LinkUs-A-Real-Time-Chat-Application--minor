@@ -1,21 +1,34 @@
 import React, { useState } from 'react'
 import { Button, FormControl, FormLabel, Input, InputGroup, InputRightAddon, InputRightElement, Show, VStack, useToast } from '@chakra-ui/react'
+<<<<<<< HEAD
 import { json, useNavigate } from 'react-router'
 import Cookies from "js-cookie";
+=======
+import { useNavigate } from 'react-router'
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 import axios from 'axios'
 const SignIn = () => {
 
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
+<<<<<<< HEAD
     const endpoint = process.env.REACT_APP_BASE_URL;
     const [Show, setShow] = useState(false)
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
     const handleCLick = () => setShow(!Show)
     const [loading, setLoading] = useState(false)
+=======
+
+    const [Show, setShow] = useState(false)
+
+    const handleCLick = () => setShow(!Show)
+    const [loading, setLoading] = useState( false)
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     const toast = useToast()
     const navigate = useNavigate()
     const submitHandler = async () => {
         setLoading(true);
+<<<<<<< HEAD
         if (!email) {
             toast({
                 title: "Please enter  the gmail",
@@ -41,6 +54,11 @@ const SignIn = () => {
           if (!password) {
             toast({
                 title: "Please enter  the password",
+=======
+        if (!email || !password) {
+            toast({
+                title: "Please Fill all the Fields",
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                 status: "warning",
                 duration: 5000,
                 isClosable: true,
@@ -58,11 +76,19 @@ const SignIn = () => {
             };
 
             const { data } = await axios.post(
+<<<<<<< HEAD
                 `${endpoint}/api/user/login`,
                 { email, password },
                 config
             );
 
+=======
+                "/api/user/login",
+                { email, password },
+                config
+            );
+                
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             toast({
                 title: "Login Successful",
                 status: "success",
@@ -71,6 +97,7 @@ const SignIn = () => {
                 position: "bottom",
             });
             
+<<<<<<< HEAD
             
             // sessionStorage.setItem("user" , JSON.stringify(data.token)) 
             // sessionStorage.setItem("User", JSON.stringify(data.token));
@@ -92,6 +119,9 @@ const SignIn = () => {
            
             
             
+=======
+            localStorage.setItem("userInfo", JSON.stringify(data));
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             setLoading(false);
             navigate('/chat');
         } catch (error) {
@@ -110,12 +140,21 @@ const SignIn = () => {
 
 
     return (
+<<<<<<< HEAD
         <VStack spacing="5px" color='black' >
             <FormControl id='email' isRequired >
                 <FormLabel> Email </FormLabel>
                 <Input
 
                     value={email}
+=======
+        <VStack spacing="5px" color='black' >SignUp
+            <FormControl id='email' isRequired >
+                <FormLabel> Email </FormLabel>
+                <Input
+            
+                value={email}
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                     placeholder='Enter your Email'
                     onChange={(e) => setEmail(e.target.value)}
                 />
@@ -167,6 +206,7 @@ const SignIn = () => {
                 onClick={() => {
                     setEmail("guest@example.com")
                     setPassword("12345678")
+<<<<<<< HEAD
                     // toast({
                     //     title: "CREATE YOUR OWN ID ",
                     //     status: "error",
@@ -174,6 +214,8 @@ const SignIn = () => {
                     //     isClosable: true,
                     //     position: "top",
                     // });
+=======
+>>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                 }}
             >
 

@@ -11,10 +11,7 @@ import { Drawer, DrawerBody, DrawerContent, DrawerHeader, DrawerOverlay, Input, 
 import { Await, useNavigate } from 'react-router-dom';
 import NotificationBadge from "react-notification-badge";
 import { Effect } from "react-notification-badge";
-<<<<<<< HEAD
 import Cookies from "js-cookie";
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
 import axios from "axios";
 import ChatLoading from '../ChatLoading';
@@ -37,7 +34,6 @@ const SideDrawer = () => {
     const { isOpen, onOpen, onClose } = useDisclosure()
     const toast = useToast()
     const logoutHandler = () => {
-<<<<<<< HEAD
         // sessionStorage.removeItem("User");
         Cookies.remove("token", { path: "/" });
 
@@ -45,13 +41,6 @@ const SideDrawer = () => {
     }
 
     const endpoint = process.env.REACT_APP_BASE_URL;
-=======
-        localStorage.removeItem("userInfo");
-        navigate("/")
-    }
-
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     const handleSearch = async () => {
         if (!search) {
             toast({
@@ -69,19 +58,11 @@ const SideDrawer = () => {
 
             const config = {
                 headers: {
-<<<<<<< HEAD
-                    Authorization: `Bearer ${user}`,
-                },
-            };
-
-            const { data } = await axios.get(`${endpoint}/api/user?search=${search}`, config)
-=======
                     Authorization: `Bearer ${user.token}`,
                 },
             };
 
-            const { data } = await axios.get(`/api/user?search=${search}`, config)
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
+            const { data } = await axios.get(`${endpoint}/api/user?search=${search}`, config)
             setLoading(false);
             setSearchResult(data);
         }
@@ -107,17 +88,10 @@ const SideDrawer = () => {
             const config = {
                 headers: {
                     "Content-type": "application/json",
-<<<<<<< HEAD
-                    Authorization: `Bearer ${user}`,
-                },
-            };
-            const { data } = await axios.post(`${endpoint}/api/chat`, { userId }, config);
-=======
                     Authorization: `Bearer ${user.token}`,
                 },
             };
-            const { data } = await axios.post(`/api/chat`, { userId }, config);
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
+            const { data } = await axios.post(`${endpoint}/api/chat`, { userId }, config);
 
             if (!chats.find((c) => c._id === data._id)) setChats([data, ...chats]);
             setSelectedChat(data);

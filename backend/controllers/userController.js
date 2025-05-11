@@ -41,10 +41,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
 const authUser = asyncHandler(async (req, res) => {
     const { email, password } = req.body;
-<<<<<<< HEAD
     
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
     const user = await User.findOne({ email });
 
@@ -55,17 +52,11 @@ const authUser = asyncHandler(async (req, res) => {
             email: user.email,
             pic: user.pic,
             token: generateToken(user._id),
-<<<<<<< HEAD
             
 
         })
         
         
-=======
-
-
-        })
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     } else {
         res.status(401);
         throw new Error("invalid email and password")

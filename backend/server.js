@@ -63,13 +63,8 @@ const server = app.listen(5000, console.log(`server started on port ${PORT}`.blu
 const io = require("socket.io")(server, {
     pingTimeout: 60000,
     cors: {
-<<<<<<< HEAD
         origin: JSON.parse(process.env.CORS_ORIGIN),
         
-=======
-        origin: "http://localhost:3000",
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     },
 });
 
@@ -105,10 +100,3 @@ io.on("connection", (socket) => {
         socket.leave(userData._id);
     });
 });
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947

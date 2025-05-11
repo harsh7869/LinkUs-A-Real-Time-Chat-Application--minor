@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { Button, FormControl, FormLabel, Input, InputGroup, InputRightAddon, InputRightElement, Show, VStack, useToast } from '@chakra-ui/react'
 import axios from "axios"
@@ -182,26 +181,6 @@ const SignUp = () => {
             // setLoading(false);
         }
     };
-=======
-import React, { useState } from 'react'
-import { Button, FormControl, FormLabel, Input, InputGroup, InputRightAddon, InputRightElement, Show, VStack, useToast } from '@chakra-ui/react'
-import axios from "axios"
-import { useNavigate } from 'react-router-dom'
-
-const SignUp = () => {
-    const [name, setName] = useState()
-    const [email, setEmail] = useState()
-    const [password, setPassword] = useState()
-    const [confirmPassword, setConfirmPassword] = useState()
-    const [pic, setPic] = useState()
-    const [Show, setShow] = useState(false)
-    
-    const [loading, setLoading] = useState(false)
-    const handleCLick = () => setShow(!Show)
-    const toast = useToast()
-    const navigate = useNavigate()
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
     const postDetails = (pics) => {
         setLoading(true);
@@ -223,11 +202,7 @@ const SignUp = () => {
             data.append("cloud_name", "minor-linkus");
             fetch("https://api.cloudinary.com/v1_1/minor-linkus/image/upload", {
                 method: "post",
-<<<<<<< HEAD
                 body: data,  
-=======
-                body: data,
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             })
                 .then((res) => res.json())
                 .then((data) => {
@@ -266,7 +241,6 @@ const SignUp = () => {
             setLoading(false)
             return;
         }
-<<<<<<< HEAD
         if (!IsVerify) {
             toast({
                 title: "Email is not verified",
@@ -279,8 +253,6 @@ const SignUp = () => {
             setLoading(false);
             return;
         }
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
         if (password !== confirmPassword) {
             toast({
                 title: "password do not match",
@@ -300,11 +272,7 @@ const SignUp = () => {
                 },
             };
             const { data } = await axios.post(
-<<<<<<< HEAD
                 `${endpoint}/api/user`,
-=======
-                "/api/user",
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                 {
                     name,
                     email,
@@ -320,7 +288,6 @@ const SignUp = () => {
                 isClosable: true,
                 position: "bottom",
             });
-<<<<<<< HEAD
             
             // sessionStorage.setItem("User", JSON.stringify(data.token));
             Cookies.set("token", JSON.stringify(data), {
@@ -332,9 +299,6 @@ const SignUp = () => {
             });
             // const tol =Cookies.get("token");
             // console.log(tol);
-=======
-            localStorage.setItem("userInfo", JSON.stringify(data));
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             setLoading(false);
             navigate('/chat')
             
@@ -355,11 +319,7 @@ const SignUp = () => {
 
 
     return (
-<<<<<<< HEAD
         <VStack spacing="5px" color='black' p={0} m={0} >
-=======
-        <VStack spacing="5px" color='black' >SignUp
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             <FormControl id='first-name' isRequired >
                 <FormLabel> Name </FormLabel>
                 <Input
@@ -369,7 +329,6 @@ const SignUp = () => {
             </FormControl>
             <FormControl id='email1' isRequired >
                 <FormLabel> Email </FormLabel>
-<<<<<<< HEAD
                 <InputGroup>
                     <Input
                         placeholder="Enter your Email"
@@ -414,12 +373,6 @@ const SignUp = () => {
                         )}
                     </InputRightElement>
                 </InputGroup>
-=======
-                <Input
-                    placeholder='Enter your Email'
-                    onChange={(e) => setEmail(e.target.value)}
-                />
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             </FormControl>
             <FormControl id='password1' isRequired >
                 <FormLabel> Password </FormLabel>
@@ -430,11 +383,7 @@ const SignUp = () => {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <InputRightElement width="4.5rem">
-<<<<<<< HEAD
                         <Button h="1.75rem" size="sm" onClick={handleClick} >
-=======
-                        <Button h="1.75rem" size="sm" onClick={handleCLick} >
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                             {Show ? "hide" : "show"}
 
                         </Button>
@@ -458,11 +407,7 @@ const SignUp = () => {
                         onChange={(e) => setConfirmPassword(e.target.value)}
                     />
                     <InputRightElement width="4.5rem">
-<<<<<<< HEAD
                         <Button h="1.75rem" size="sm" onClick={handleClick} >
-=======
-                        <Button h="1.75rem" size="sm" onClick={handleCLick} >
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                             {Show ? "hide" : "show"}
 
                         </Button>

@@ -10,7 +10,6 @@ const protect = asyncHandler(async (req, res, next) => {
         req.headers.authorization.startsWith("Bearer")
     ) {
         try {
-<<<<<<< HEAD
             
 
             
@@ -21,15 +20,6 @@ const protect = asyncHandler(async (req, res, next) => {
             
             req.user = await User.findById(decoded.id).select("-password");
             
-=======
-            token = req.headers.authorization.split(" ")[1];
-
-
-            const decoded = jwt.verify(token, process.env.JWT_SECRET);
-
-            req.user = await User.findById(decoded.id).select("-password");
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             next();
         } catch (error) {
             res.status(401);

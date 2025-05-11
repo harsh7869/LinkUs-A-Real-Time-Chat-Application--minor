@@ -15,10 +15,5 @@ const connectDB = async() => {
             console.log(`Error : ${error.message}`.bgRed.bold);
             process.exit();
         }
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 };
 module.exports=connectDB;

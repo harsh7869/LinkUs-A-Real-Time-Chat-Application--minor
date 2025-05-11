@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-<<<<<<< HEAD
 import {Box, Container, Image, Img, Tab, TabList, TabPanel, TabPanels, Tabs, Text} from '@chakra-ui/react'
 import SignIn from '../components/authentication/SignIn';
 import SignUp from '../components/authentication/SignUp';
@@ -7,24 +6,14 @@ import Cookies from "js-cookie";
 
 import { useNavigate } from 'react-router';
 const title = process.env.REACT_APP_TILE;
-=======
-import {Box, Container, Image, Tab, TabList, TabPanel, TabPanels, Tabs, Text} from '@chakra-ui/react'
-import SignIn from '../components/authentication/SignIn';
-import SignUp from '../components/authentication/SignUp'
-import { useNavigate } from 'react-router';
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 const HomePage = () => {
 
   const navigate = useNavigate();
   useEffect(() => {
 
-<<<<<<< HEAD
           // const user = JSON.parse(sessionStorage.getItem("User"))
            const user = Cookies.get("token");
           console.log(user)
-=======
-          const user = JSON.parse(localStorage.getItem("userInfo"))
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
           if (user) {
               navigate("/chat")
           }
@@ -36,7 +25,6 @@ const HomePage = () => {
   return (
 
     
-<<<<<<< HEAD
       
       <Container 
       maxW="xl"
@@ -45,10 +33,6 @@ const HomePage = () => {
        flexDirection="column" 
        justifyContent="center"
        >
-=======
-    
-      <Container maxW="xl" centerContent >
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
         <Box
           display="flex"
           justifyContent="center"
@@ -57,28 +41,19 @@ const HomePage = () => {
           p={3}
           bg={"white"}
           w="100%"
-<<<<<<< HEAD
            mb="15px"
           // m="10px 0 15px 0 "
-=======
-          m="40px 0 15px 0 "
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
           borderRadius="lg"
           borderWidth="1px"
         >
         
           <Text fontSize="5xl" fontFamily="Work sans" >
-<<<<<<< HEAD
            {process.env.REACT_APP_TILE}    
-=======
-            LinkUs    
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             
           </Text>
           
         </Box>
         <Box
-<<<<<<< HEAD
         bg="white" 
         w="100%"
          p={4} borderRadius="lg" color="black" borderWidth="1px"
@@ -87,12 +62,6 @@ const HomePage = () => {
         >
           <Tabs variant='soft-rounded' >
   <TabList mb="0.5em">
-=======
-        bg="white" w="100%" p={4} borderRadius="lg" color="black" borderWidth="1px"
-        >
-          <Tabs variant='soft-rounded' >
-  <TabList mb="1em">
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     <Tab width="50%">SIGN IN</Tab>
     <Tab width="50%">SIGN UP</Tab>
   </TabList>

@@ -1,9 +1,6 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-<<<<<<< HEAD
 import Cookies from "js-cookie";
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 
 const ChatContext = createContext();
 
@@ -13,7 +10,6 @@ const ChatProvider = ({ children }) => {
     const [notification, setNotification] = useState([]);
     const [chats, setChats] = useState();
     const navigate = useNavigate();
-<<<<<<< HEAD
     const endPoint = process.env.REACT_APP_BASE_URL;
     useEffect(() => {
         const fetchUserData = async () => {
@@ -28,24 +24,12 @@ const ChatProvider = ({ children }) => {
             
             
             if (!User) {
-=======
-
-    useEffect(() => {
-        const fetchUserData = async () => {
-            const userInfo = await JSON.parse(localStorage.getItem("userInfo"));
-            setUser(userInfo);
-            if (!userInfo) {
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
                 navigate("/");
             }
         };
         fetchUserData();
     }, [navigate])
-<<<<<<< HEAD
     
-=======
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
     return (
         <ChatContext.Provider
             value={{
@@ -57,10 +41,7 @@ const ChatProvider = ({ children }) => {
                 setNotification,
                 chats,
                 setChats,
-<<<<<<< HEAD
                 endPoint
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
             }}
         >
             {children}

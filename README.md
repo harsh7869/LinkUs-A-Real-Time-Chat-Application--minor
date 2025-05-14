@@ -118,13 +118,13 @@ Follow these steps to set up the project locally:
 1. **Clone the Repository**  
    Clone the project repository to your local machine.  
    ```bash  
-   git clone https://github.com/devgupta0513/LinkUs-minor-1.git  
+   git clone https://github.com/harsh7869/LinkUs-A-Real-Time-Chat-Application--minor.git  
    ```
 
 2. **Navigate to the Main Project Directory**  
    Change to the main project folder:  
    ```bash  
-   cd LinkUs-minor-1  
+   cd LinkUs-A-Real-Time-Chat-Application--minor-  
    ```
 
 3. **Install Dependencies**  

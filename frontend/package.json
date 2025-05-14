@@ -2,7 +2,6 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
-  
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.1",
@@ -15,7 +14,7 @@
     "framer-motion": "^10.16.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-lottie": "^1.2.3",
+    "react-lottie": "^1.2.10",
     "react-notification-badge": "^1.5.1",
     "react-router-dom": "^6.17.0",
     "react-scripts": "5.0.1",
@@ -23,7 +22,7 @@
     "socket.io-client": "^4.7.2",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://devgupta0513.github.io/LinkUs-minor-1",
+  "homepage": "https://github.com/harsh7869/LinkUs-A-Real-Time-Chat-Application--minor",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

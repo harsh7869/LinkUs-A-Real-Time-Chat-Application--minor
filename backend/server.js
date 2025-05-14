@@ -1,8 +1,4 @@
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 const express = require("express");
 const dotenv = require("dotenv");
 const { chats } = require("./data/data");
@@ -11,11 +7,7 @@ const colors = require("colors");
 const chatRoutes = require("./Routes/chatRoutes");
 const userRoutes = require('./Routes/userRoutes');
 const messageRoutes = require('./Routes/messageRoutes')
-<<<<<<< HEAD
 const cors = require("cors");
-=======
-
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 const { notFound, errorHandler } = require("./middlewares/errrorMIddleware");
 const { Socket } = require("socket.io");
 
@@ -27,7 +19,6 @@ const app = express();
 
 
 app.use(express.json())
-<<<<<<< HEAD
 app.use(
     cors({
   origin: JSON.parse(process.env.CORS_ORIGIN),
@@ -40,11 +31,6 @@ app.get('/', (req, res) => {
     res.json({
         "NAME":"BACKEND OF LinkUs",
     });
-=======
-
-app.get('/', (req, res) => {
-    res.send("api is setteled");
->>>>>>> 83b3c62f871021a5988bdf29fe2b3e6b0fd89947
 })
 
 app.use('/api/user', (userRoutes))

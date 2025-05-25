@@ -70,18 +70,18 @@ const otpTemplate = (otp) => {
 	<body>
 		<div class="container">
 			<a href=""><img class="logo"
-					src="http://res.cloudinary.com/minor-linkus/image/upload/v1731516552/try/deeoeguluc0ecizzubzf.png" alt="HomeGate Logo"></a>
+					src="https://res.cloudinary.com/dc0pxract/image/upload/v1748178937/colorful_minimalist_dice_chat_logo-removebg-preview_f7bxca.png" alt="LinkUs Logo"></a>
 			<div class="message">OTP Verification Email</div>
 			<div class="body">
 				<p>Dear User,</p>
-				<p>Thank you for registering with HomeGate. To complete your registration, please use the following OTP
+				<p>Thank you for registering with Linkus. To complete your registration, please use the following OTP
 					(One-Time Password) to verify your account:</p>
 				<h2 class="highlight">${otp}</h2>
 				<p>This OTP is valid for 5 minutes. If you did not request this verification, please disregard this email.
 				Once your account is verified, you will have access to our platform and its features.</p>
 			</div>
 			<div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-					href="mailto:homegate.info@gmail.com">homegate.info@gmail.com</a>. We are here to help!</div>
+					href="mailto:harshshukla1178@gmail.com">harshshukla1178@gmail.com</a>. We are here to help!</div>
 		</div>
 	</body>
 	

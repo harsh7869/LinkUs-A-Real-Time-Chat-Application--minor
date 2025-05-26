@@ -11,7 +11,7 @@
     "predeploy": " cd frontend && npm run build",
     "deploy": " cd frontend && gh-pages -d build"
   },
-  "author": "DEV",
+  "author": "HARSH",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.6.0",
